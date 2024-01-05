@@ -1,0 +1,27 @@
+<header>
+    <div class="bar">
+        <ul class="bar-option">
+            <li class="option-tarefas">
+                <a href="/">Home</a>
+            </li>
+            {{#if user}}
+                <li class="option">
+                    <a href="/users/logout">Sair</a>
+                </li>
+                <li class="option">
+                    <a href="/">Olá, {{user.name}}</a>
+                </li>
+                <li class="option">
+                    <a href="/gerencia/task">Tarefas</a>
+                </li>
+            {{else}}
+            <li class="option">
+                    <a href="/users/register">Cadastro</a>
+                </li>
+                <li class="option">
+                    <a href="/users/login">Login</a>
+                </li>
+            {{/if}}
+        </ul>
+    </div>
+</header>

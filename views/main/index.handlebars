@@ -1,0 +1,16 @@
+<section class="section-home"> 
+    <br>    
+    <div class="box-home">
+        {{#if user}}
+            <h2 class="text-task">Bem-vindo ao TaskManager</h2>
+            <br>
+            <a href="/gerencia/task"><button class="button-addnewtask">Começar a organizar seu dia!</button></a>
+        {{else}}
+            <h2 class="text-task">Bem-vindo ao TaskManager</h2>
+            <br>
+            <h4 class="text-task">Crie uma conta para começar a organizar as tarefas da sua empresa!</h4>
+            <br>
+            <a href="/users/register"><button class="button-addnewtask">Criar uma conta</button></a>
+        {{/if}}
+    </div>
+</section>

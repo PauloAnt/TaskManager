@@ -1,0 +1,30 @@
+{{#each erros}}
+    <div class="alert alert-danger">{{texto}}</div>
+
+{{/each}}
+<section class="section-register">
+    <div class="box-register">
+        <form action="/users/register/adduser" method="POST" class="form-login">
+            <h4 class="text-register">Registrar</h4>
+            <br>
+            <input type="text" name="name" id="name" class="input-register" placeholder="Usuário" autocomplete="username" required>
+            <br>
+            <br>
+            <input type="text" name="email" id="email" class="input-register" placeholder="Email" autocomplete="email" required>
+            <br>
+            <br>
+            <select  class="cargo"id="cargo" name="cargo">
+                <option value="0" disabled selected hidden>Escolha uma opção</option>
+                <option value="gerencia">Gerência</option>
+                <option value="funcionario">Funcionário</option>
+            </select>
+            <br>
+            <br>
+            <input type="password" name="password" id="password" class="input-register" placeholder="Senha" autocomplete="current-password" required>
+            <br>
+            <br>
+            <button type="submit" class="button-register">Registrar</button>
+            <br>
+        </form>
+    </div>
+</section>

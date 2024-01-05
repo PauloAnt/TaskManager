@@ -1,0 +1,57 @@
+<div class="conteiner">
+    <div class="task-box"></div> 
+        <h2 class="text-task">Tarefas Pendentes: </h2>
+        <hr>
+        <a href="/gerencia/task/addtask"><button class="button-addnewtask">Adicionar nova tarefa</button></a>
+    </div>
+
+    {{#each tarefas}}
+        <div class="card mt-4">
+            <div class="card-body">
+                <form id="form-check{{_id}}" method="POST">
+                    <input type="checkbox" class="concluded" name="concluded" id="concluded{{_id}}" {{#unless pendent}}checked{{else}}{{/unless}}>
+                    <small class="text-concluded">Marcar como concluído: </small>
+                </form>
+                <h4 style="font-weight: bold">{{title}}</h4>
+                {{#if pendent}}
+                    <hr>
+                    <small>Data: {{date}}</small><br>
+                    <small>Conteúdo: {{content}}</small>
+                    <br>
+                    <hr>
+                    <form action="/gerencia/task/del/{{_id}}" method="POST" class="d-inline">
+                        <input type="hidden" name="id" value="{{_id}}">
+                        <button class="del-task">Deletar</button>
+                    </form>
+                    <a href="/gerencia/task/edit/{{_id}}" class="ml-2"><button class="edit-task">Editar</button></a>
+                {{else}}
+                    <form action="/gerencia/task/del/{{_id}}" method="POST">
+                        <input type="hidden" name="id" value="{{_id}}">
+                        <button class="del-task-check">Deletar</button>
+                    </form>
+                {{/if}}
+            </div>
+        </div>
+    {{else}}
+        <br>
+        <h4 class="text-task">Nenhuma tarefa pendente.</h4>
+    {{/each}}
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        {{#each tarefas}}
+            var conclued{{_id}} = document.getElementById('concluded{{_id}}');
+            var form{{_id}} = document.getElementById('form-check{{_id}}');
+
+            conclued{{_id}}.addEventListener('change', function() {
+                if (conclued{{_id}}.checked) {
+                    form{{_id}}.action = '/gerencia/task/checked/{{_id}}/true';
+                    form{{_id}}.submit();
+                } else {
+                    form{{_id}}.action = '/gerencia/task/checked/{{_id}}/false';
+                    form{{_id}}.submit();
+                }
+            });
+        {{/each}}
+    });
+</script>

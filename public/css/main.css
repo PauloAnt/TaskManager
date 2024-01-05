@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap');
+:root {
+    --cor-letras-bar: rgb(83, 200, 221);
+    --cor-button: rgb(83, 200, 221);
+    --cor-branca: rgb(226, 225, 225);
+  }
+body{
+    font-family: 'Nunito', sans-serif;
+    background-color: rgb(61, 60, 60);
+}
+button:active{
+    outline: none;
+}
+.bar-option li{
+    list-style: none;
+    display: inline;
+}
+
+.option-tarefas a{
+    color: var(--cor-branca);
+    display: inline-block;
+    font-size: 25px;
+    margin: 20px 0 0 30px;
+    text-decoration: none;
+    list-style: none;
+}
+
+.option a{
+    color: var(--cor-branca);
+    display: inline-block;
+    font-size: 25px;
+    float: right;
+    text-decoration: none;
+    list-style: none;
+    margin: 20px 30px 0 30px;  
+}
+
+/* Addtask */
+.button-task{
+    padding: 15px 25px;
+    border: none;
+    color: white;
+    background-color: var(--cor-button);
+    font-weight: bold;
+    border-radius: 5px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.button-task:hover{
+    transition: 0.5s;
+    background-color: gainsboro;
+    color: rgb(90, 90, 90)
+}
+label{
+    color: white;
+}
+
+/* Task */
+.text-task{
+    color: var(--cor-branca);
+}
+.button-addnewtask{
+    padding: 15px 25px;
+    border: none;
+    color: white;
+    background-color: var(--cor-button);
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 5px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.button-addnewtask:hover{
+    transition: 0.5s;
+    background-color: gainsboro;
+    color: rgb(90, 90, 90);
+}
+.del-task{
+    justify-content: end;
+    font-weight: 600;
+    border: none;
+    background-color: var(--cor-letras-bar);
+    color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+.del-task:hover{
+    transition: 0.5s;
+    background-color: gainsboro;
+    color: rgb(90, 90, 90);
+}
+.text-concluded{
+    float: right;
+    font-size: 15px;
+}
+.concluded{
+    float: right;
+    height: 20px;
+    width: 20px;
+    margin-left: 10px;
+    cursor: pointer;
+    
+}
+
+.edit-task{
+    justify-content: end;
+    font-weight: 600;
+    border: none;
+    background-color: var(--cor-letras-bar);
+    color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+.edit-task:hover{
+    transition: 0.5s;
+    background-color: gainsboro;
+    color: rgb(90, 90, 90);
+}
+.button-invisible{
+    display:none;
+}
+.del-task-check{
+    font-weight: 600;
+    float: right;
+    border: none;
+    background-color: var(--cor-letras-bar);
+    color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+.del-task-check:hover{
+    transition: 0.5s;
+    background-color: gainsboro;
+    color: rgb(90, 90, 90);
+}
+.section-register{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.box-register{
+    background-color: rgb(141, 139, 139);
+    padding: 50px;
+    border-radius: 20px;
+}
+.text-register{
+    color: white;
+    font-size: 27px;
+    font-weight: 600;
+}
+.input-register{
+    border-radius: 10px;
+    padding: 10px;
+    border: none;
+    width: 400px;
+    height: 40px;
+}
+.cargo{
+    border-radius: 10px;
+    border: none;
+    float: left;
+}
+.button-register{
+    font-weight: 600;
+    border: none;
+    background-color: var(--cor-letras-bar);
+    color: white;
+    font-size: 20px;
+    padding: 10px 30px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+.button-register:hover{
+    transition: 0.5s;
+    background-color: gainsboro;
+    color: rgb(90, 90, 90);
+}
+
+.box-home{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+hr{
+    background-color: rgb(82, 81, 81);
+}
+
+a{
+    text-decoration: none;
+    list-style: none;
+}
+
+
+  
